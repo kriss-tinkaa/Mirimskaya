@@ -1,0 +1,22 @@
+.main-banner {
+  height: 100vh;
+}
+
+.navigation {
+  width: 30%;
+}
+
+.banner {
+  background-image: url("./../img/banner.jpg");
+}
+
+body {
+  min-width: 320px;
+}
+
+.d-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=style.css.map */
