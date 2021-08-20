@@ -1,0 +1,64 @@
+*{
+    box-sizing:border-box;
+    padding: 0;
+    margin: 0;
+  }
+  html,body {
+    height: 100vh;
+    min-width: 320px;
+  }
+  button{
+    border:none;
+    cursor: pointer;
+    background: transparent;
+    padding: 0;
+    text-align: center;
+    display: inline-block;
+  }
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    transition: .4s ease-in-out;
+  }
+  svg,
+  svg > * {
+    transition: all .4s ease-in-out;
+  }
+  ul { list-style: none; }
+  form, fieldset {border-style: none;}
+  img {
+    border-style: none;
+    vertical-align:top;
+    width:100%;
+    height: auto;
+  }
+  input,
+  select,
+  textarea {
+    width: 100%;
+    border-radius: 0;
+    border: none;
+    outline: none;
+    resize: none;
+    transition: .4s ease-in-out;
+  }
+  article, aside, details, figcaption, figure, picture,
+  footer, header, hgroup, menu, nav, section {
+    display:block;
+  }
+  button::-moz-focus-inner {border:0;}
+  a:focus,
+  a:hover,
+  button:focus,
+  button:hover,
+  input:focus,
+  input:hover,
+  select:focus,
+  select:hover,
+  textarea:focus,
+  textarea:hover {
+    outline: none;
+  }
+  table { width: 100%; }
+  
+  abbr { text-decoration: none; }
