@@ -54,6 +54,10 @@ section{
         }
     }
     @media only screen and (max-width: 767px){
+        &:not(.banner-section){
+            padding: 0 30px;
+            margin: 30px 0;
+        }
         .section-title{
             position: relative;
             h3{
@@ -64,6 +68,9 @@ section{
             &:before{
                 width: 100%;
                 left: 0;
+            }
+            p{
+                text-align: center;
             }
         }
     }
@@ -150,6 +157,11 @@ section{
     @media only screen and (max-width: 767px){
         &__title{
             font-size: 38px;
+            bottom: 0;
+        }
+        &__description,
+        &__subtitle{
+            display: none;
         }
     }
 }
@@ -178,8 +190,13 @@ section{
         }
     }
     @media only screen and (max-width: 767px){
-        &__item{
+        &__item{          
             width: 100%;
+            &:first-child,
+            &:last-child{
+                padding: 10px 0;
+                text-align: center;
+            }
         }
     }
 }
@@ -223,6 +240,13 @@ section{
             bottom: -43px;
             left: 142px;
             content: url('../img/arrow.svg');
+        }
+    }
+    @media only screen and (max-width: 767px){
+        &__content{
+            &:after{
+                content: url('../img/sm-arrow.svg');  
+            }
         }
     }
 }
@@ -276,6 +300,38 @@ section{
             font-size:1.125rem;
         }
     }
-    @media only screen and (max-width: 991px){ 
+    @media only screen and (max-width: 767px){ 
+        &__item{
+            margin: 25px 0;
+            padding: 0;
+            width: 100%;
+            &.active{
+                width: 100%;
+                .initiative__content,
+                .initiative__img{
+                    width: 100%;
+                }
+                
+            }
+        }
+        &__img{
+            height: auto;
+            min-height: 240px;
+            width: 100%;
+        }
+        &__content{
+            margin-top: 30px;
+        }
+        &__title{
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        &__description{
+            text-align: center;
+            padding-bottom: 30px;
+        }
+        .btn-arrow{
+            margin: 0 auto;
+        }
     }
 }

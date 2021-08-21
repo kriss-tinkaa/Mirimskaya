@@ -157,6 +157,17 @@ img {
   }
 }
 
+.mob-title {
+  display: none;
+  text-align: center;
+}
+
+@media only screen and (max-width: 767px) {
+  .mob-title {
+    display: block;
+  }
+}
+
 .btn:hover {
   cursor: pointer;
 }
@@ -329,6 +340,10 @@ section .section-title p {
 }
 
 @media only screen and (max-width: 767px) {
+  section:not(.banner-section) {
+    padding: 0 30px;
+    margin: 30px 0;
+  }
   section .section-title {
     position: relative;
   }
@@ -340,6 +355,9 @@ section .section-title p {
   section .section-title:before {
     width: 100%;
     left: 0;
+  }
+  section .section-title p {
+    text-align: center;
   }
 }
 
@@ -423,6 +441,10 @@ section .section-title p {
 @media only screen and (max-width: 767px) {
   .main-banner__title {
     font-size: 38px;
+    bottom: 0;
+  }
+  .main-banner__description, .main-banner__subtitle {
+    display: none;
   }
 }
 
@@ -463,6 +485,10 @@ section .section-title p {
 @media only screen and (max-width: 767px) {
   .biography__item {
     width: 100%;
+  }
+  .biography__item:first-child, .biography__item:last-child {
+    padding: 10px 0;
+    text-align: center;
   }
 }
 
@@ -511,6 +537,12 @@ section .section-title p {
   bottom: -43px;
   left: 142px;
   content: url("../img/arrow.svg");
+}
+
+@media only screen and (max-width: 767px) {
+  .opinions__content:after {
+    content: url("../img/sm-arrow.svg");
+  }
 }
 
 .initiative__item {
@@ -573,6 +605,40 @@ section .section-title p {
   }
 }
 
+@media only screen and (max-width: 767px) {
+  .initiative__item {
+    margin: 25px 0;
+    padding: 0;
+    width: 100%;
+  }
+  .initiative__item.active {
+    width: 100%;
+  }
+  .initiative__item.active .initiative__content,
+  .initiative__item.active .initiative__img {
+    width: 100%;
+  }
+  .initiative__img {
+    height: auto;
+    min-height: 240px;
+    width: 100%;
+  }
+  .initiative__content {
+    margin-top: 30px;
+  }
+  .initiative__title {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  .initiative__description {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  .initiative .btn-arrow {
+    margin: 0 auto;
+  }
+}
+
 .footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -583,5 +649,21 @@ section .section-title p {
   padding: 70px 0;
   margin: 0 60px;
   border-top: 1px solid #AFC5DF;
+}
+
+@media only screen and (max-width: 767px) {
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer > div {
+    max-width: 170px;
+    margin: 0 auto;
+    padding-top: 15px;
+    text-align: center;
+    line-height: 25px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

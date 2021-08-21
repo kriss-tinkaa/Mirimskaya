@@ -34,6 +34,13 @@ body {
       flex-direction: column;
     }
   }
+  .mob-title{
+    display: none;
+    text-align: center;
+    @media only screen and (max-width: 767px){
+      display: block;
+    }
+  }
 
 
 .btn{
