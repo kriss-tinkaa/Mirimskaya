@@ -1,6 +1,6 @@
 body {
     background-color: #fff;
-    font: 400 16px/1 Roboto, $fmain;
+    font: 400 16px/1 $fmain;
   }
 
   a {
@@ -36,12 +36,15 @@ body {
   padding-top: 90px;
 }
 
-.border-top{
-  border-top: 1px solid $btnColor;
-}
+// .border-top{
+//   border-top: 1px solid $btnColor;
+// }
 
 
 .btn{
+  &:hover{
+    cursor: pointer;
+  }
   &-arrow{
     font: 400 2.25rem/1.33 $fmain;
     color:$btnColor;
@@ -58,8 +61,56 @@ body {
     }
     
   }
-  &:hover{
-    cursor: pointer;
+  &-menu{
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    display: none;
+    z-index: 10;
+    top:30px;
+    right: 54px;
+    span{ 
+        display: block;
+        width: 20px;
+        height: 2px;
+        background-color: #fff;
+        position: relative;
+        &:after, 
+        &:before{
+            position: absolute;
+            content: '';
+            width: 20px;
+            height: 2px;
+            background-color: #fff;
+        }
+        &:after{
+          top: -5px;
+        }
+        &:before{
+          bottom: -5px;
+          right: 0;
+          width: 15px;
+        }
+    }
+    &.opened{
+      span{
+        background: transparent;
+        &:after{
+          transform: rotate(45deg);
+          background: $textColor;
+        }
+        &:before{
+          background: $textColor;
+          width: 20px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
   }
-  
+  @media only screen and (max-width: 991px){
+    &-menu{
+      display: block;
+    }
+  }
 }
+

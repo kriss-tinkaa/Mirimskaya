@@ -1,3 +1,21 @@
+ //mobile navigation
+
+ document.getElementsByClassName('.btn-menu').onclick = function() {
+  document.getElementsByClassName('.menu-wrap').classList.toggle("active");
+}
+
+document.getElementById('myButton').onclick = function() {
+    let menu = document.getElementsByClassName('.menu-wrap');
+    let className = ' ' + menu.className + ' ';
+
+    if ( ~className.indexOf(' active ') ) {
+      menu.className = className.replace(' active ', ' ');
+    } else {
+      menu.className += ' active';
+    }              
+}
+
+
 // initiative items
 function toggleItem(elem) {
     for (var i = 0; i < elem.length; i++) {

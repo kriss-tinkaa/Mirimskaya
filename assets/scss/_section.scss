@@ -2,7 +2,7 @@
 section{
     position: relative;
     &:not(.banner-section){
-        padding: 0 60px 90px 0;
+        margin: 90px 0;
     }
     display: flex;
     & > div:first-child{
@@ -10,11 +10,21 @@ section{
     }
     & > div:last-child{
         width: 80%;
+        padding: 60px 0;
     }
 
     .section-title{
         padding: 0 20px 0 60px;
-        position: relative;
+        &:before{
+            position: absolute;
+            content: '';
+            width: 80%;
+            height: 1px;
+            background-color: $btnColor;
+            right: 0;
+            top: 0;
+        }
+        
         h3{
             position: absolute;
             top: -30px;
@@ -24,12 +34,18 @@ section{
         p{
             padding-top: 60px;
         }
+        @media only screen and (max-width: 991px){
+            padding-left: 0;
+            &:before{
+                width: 64%;
+            }
+        }
     }
 
     @media only screen and (max-width: 991px){
         flex-direction: column;
         &:not(.banner-section){
-            padding: 0 65px;
+            padding: 0 55px;
         }
         
         & > div:first-child,
@@ -58,6 +74,7 @@ section{
             }
         }
     }
+    
     @media only screen and (max-width: 991px){
         position: absolute;
         display: none;
@@ -101,9 +118,18 @@ section{
         bottom: 45%;
     }
     @media only screen and (max-width: 991px){
-
-    }
-    @media only screen and (max-width: 991px){
+        &__title{
+            font-size: 4.875rem;
+            bottom: 14%;
+        }
+        &__description{
+            left: inherit;
+            bottom: 8%;
+            right: 2%;
+        }
+        &__subtitle{
+            display: none;
+        }
 
     }
     @media only screen and (max-width: 767px){
@@ -112,6 +138,7 @@ section{
 }
 
 .biography{
+    padding-top: 0;
     &__item{
         align-self: start;
         width: 50%;
@@ -125,6 +152,14 @@ section{
             margin-top: 25px;
         }
     }
+    @media only screen and (max-width: 991px){
+        margin-bottom: 25px;
+        .btn{
+            position: absolute;
+            bottom: 0;
+            left: 50px;
+        }
+    }
 }
 
 // opinions section 
@@ -132,7 +167,7 @@ section{
 .opinions{
     flex-wrap: wrap;
     &__item{
-        max-width: 300px;
+        max-width: 320px;
     }
     &__date{
         font: 400 1.125rem/1.5 $fmain;
@@ -173,15 +208,16 @@ section{
 // initiative section
 .initiative{
     &__item{
-        width: 16.6%;
+        width: 13%;
         padding: 0 14px;
         &.active{
-            width: 50%;
+            width: 60%;
             .initiative__content{
+                width: 65%;
                 display: block;
             }
             .initiative__img{
-                width: 50%;
+                width: 35%;
             }
         }  
         &:hover{
@@ -212,5 +248,12 @@ section{
         font: 400 1.5rem/1.33 $fmain;
         color: $titleColor;
         margin-bottom: 20px;
+    }
+    @media only screen and (max-width: 991px){
+        &__title{
+            font-size:1.125rem;
+        }
+    }
+    @media only screen and (max-width: 991px){ 
     }
 }
