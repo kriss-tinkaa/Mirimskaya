@@ -1,20 +1,15 @@
  //mobile navigation
 
- document.getElementsByClassName('.btn-menu').onclick = function() {
-  document.getElementsByClassName('.menu-wrap').classList.toggle("active");
-}
+ window.addEventListener("DOMContentLoaded", function() {
 
-document.getElementById('myButton').onclick = function() {
-    let menu = document.getElementsByClassName('.menu-wrap');
-    let className = ' ' + menu.className + ' ';
+  let navBurg = document.querySelector('.btn-menu');
+  let navMenu = document.querySelector('.menu-wrap')
 
-    if ( ~className.indexOf(' active ') ) {
-      menu.className = className.replace(' active ', ' ');
-    } else {
-      menu.className += ' active';
-    }              
-}
-
+  navBurg.addEventListener('click', function(e) {
+    this.classList.toggle('opened');
+    navMenu.classList.toggle('active');
+  });
+});
 
 // initiative items
 function toggleItem(elem) {

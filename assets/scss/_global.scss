@@ -30,15 +30,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @media only screen and (max-width: 767px){
+      flex-direction: column;
+    }
   }
-
-.p-t-90{
-  padding-top: 90px;
-}
-
-// .border-top{
-//   border-top: 1px solid $btnColor;
-// }
 
 
 .btn{
@@ -66,6 +61,8 @@ body {
     height: 32px;
     position: absolute;
     display: none;
+    align-items: center;
+    justify-content: center;
     z-index: 10;
     top:30px;
     right: 54px;
@@ -98,8 +95,10 @@ body {
         &:after{
           transform: rotate(45deg);
           background: $textColor;
+          top: 0;
         }
         &:before{
+          bottom: 0;
           background: $textColor;
           width: 20px;
           transform: rotate(-45deg);
@@ -109,7 +108,15 @@ body {
   }
   @media only screen and (max-width: 991px){
     &-menu{
-      display: block;
+      display: flex;
+    }
+  }
+  @media only screen and (max-width: 767px){
+    &-arrow{
+      font-size: 1.125rem;
+      &:after{
+        content: url('../img/sm-arrow.svg');
+      }
     }
   }
 }

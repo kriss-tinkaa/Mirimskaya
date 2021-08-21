@@ -53,6 +53,21 @@ section{
             width: 100%;
         }
     }
+    @media only screen and (max-width: 767px){
+        .section-title{
+            position: relative;
+            h3{
+                position: static;
+                text-align: center;
+                padding-top: 30px;
+            }
+            &:before{
+                width: 100%;
+                left: 0;
+            }
+        }
+    }
+    
 }
 
 .banner-section{
@@ -81,9 +96,9 @@ section{
         background: rgba(255, 255, 255, 0.9);
         backdrop-filter: blur(30px);
         width: 100%;
-    }
-    @media only screen and (max-width: 991px){
-
+        &.active{
+            display: block;
+        }
     }
     @media only screen and (max-width: 767px){
 
@@ -100,7 +115,7 @@ section{
         font: 400 11vw/1.2 $fsecondaty;
         color: $secondaryColor;
         left: 5%;
-        bottom: 20%;
+        bottom: 5%;
     }
     &__subtitle,
     &__description{
@@ -110,7 +125,7 @@ section{
     }
     &__description{
         left: 23%;
-        bottom: 16%;
+        bottom: 4%;
         max-width: 350px;
     }
     &__subtitle{
@@ -133,7 +148,9 @@ section{
 
     }
     @media only screen and (max-width: 767px){
-
+        &__title{
+            font-size: 38px;
+        }
     }
 }
 
@@ -158,6 +175,11 @@ section{
             position: absolute;
             bottom: 0;
             left: 50px;
+        }
+    }
+    @media only screen and (max-width: 767px){
+        &__item{
+            width: 100%;
         }
     }
 }
